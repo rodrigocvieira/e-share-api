@@ -10,6 +10,8 @@ import ronjones.share.common.share.ShareRequest;
 import ronjones.share.common.share.ShareResponse;
 import ronjones.share.service.PublishService;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/v1")
 public class Endpoint {
@@ -22,7 +24,7 @@ public class Endpoint {
     }
 
     @PostMapping("/publish")
-    public Flux<ShareResponse> publish(@RequestBody ShareRequest request) {
+    public Flux<ShareResponse> publish(@Valid @RequestBody ShareRequest request) {
         return publishService.send(request)
                 .doOnError(throwable -> System.out.println("Erro"));
     }

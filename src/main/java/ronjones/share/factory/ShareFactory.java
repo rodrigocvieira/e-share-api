@@ -1,5 +1,7 @@
 package ronjones.share.factory;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ronjones.share.common.share.enuns.SocialNetwork;
 import ronjones.share.common.share.exceptions.SocialNetworkException;
 import ronjones.share.decorator.ShareDecorator;
@@ -10,22 +12,33 @@ import ronjones.share.socialnetwork.instagram.adapter.InstagramResponseToShareRe
 import ronjones.share.socialnetwork.instagram.adapter.ShareRequestToInstagramRequestAdapter;
 import ronjones.share.socialnetwork.instagram.api.InstagramApi;
 
+@Component
 public class ShareFactory {
 
-    public static ShareDecorator<?, ?> build(SocialNetwork socialNetwork) {
+    private final FacebookApi facebookApi;
+    private final InstagramApi instagramApi;
 
-        switch (socialNetwork){
+    @Autowired
+    public ShareFactory(FacebookApi facebookApi,
+                        InstagramApi instagramApi) {
+        this.facebookApi = facebookApi;
+        this.instagramApi = instagramApi;
+    }
+
+    public ShareDecorator<?, ?> build(SocialNetwork socialNetwork) {
+
+        switch (socialNetwork) {
             case FACEBOOK:
                 return new ShareDecorator<>(
                         new ShareRequestToFacebookRequestAdapter(),
                         new FacebookResponseToShareResponse(),
-                        new FacebookApi()
+                        facebookApi
                 );
             case INSTAGRAM:
                 return new ShareDecorator<>(
                         new ShareRequestToInstagramRequestAdapter(),
                         new InstagramResponseToShareResponse(),
-                        new InstagramApi()
+                        instagramApi
                 );
             default:
                 throw new SocialNetworkException(String.format("%s não implementado", socialNetwork));

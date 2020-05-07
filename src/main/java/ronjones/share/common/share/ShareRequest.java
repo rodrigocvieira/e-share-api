@@ -1,10 +1,9 @@
 package ronjones.share.common.share;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import ronjones.share.common.share.enuns.SocialNetwork;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
@@ -12,9 +11,14 @@ import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 @JsonInclude(NON_NULL)
 public class ShareRequest {
 
+    @NotNull(message = "Email não informado!")
     private String email;
+
     private String message;
+
     private String linkPhoto;
+
+    @NotNull(message = "Nenhuma rede social informada!")
     private List<SocialNetwork> socialNetworkLists;
 
     public String getEmail() {
