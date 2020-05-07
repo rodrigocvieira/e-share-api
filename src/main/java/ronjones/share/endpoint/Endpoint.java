@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
 import ronjones.share.common.share.ShareRequest;
 import ronjones.share.common.share.ShareResponse;
 import ronjones.share.service.PublishService;
@@ -22,12 +22,8 @@ public class Endpoint {
     }
 
     @PostMapping("/publish")
-    public Mono<ShareResponse> publish(@RequestBody ShareRequest request,
-                                       Mono<Object> test) {
-        return test.flatMap(o -> {
-            return publishService.send(request)
-                    .doOnSuccess(shareResponse -> System.out.println("Success"))
-                    .doOnError(throwable -> System.out.println("Erro"));
-        });
+    public Flux<ShareResponse> publish(@RequestBody ShareRequest request) {
+        return publishService.send(request)
+                .doOnError(throwable -> System.out.println("Erro"));
     }
 }
