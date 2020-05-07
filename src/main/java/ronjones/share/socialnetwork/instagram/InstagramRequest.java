@@ -1,21 +1,15 @@
-package ronjones.share.common.share;
+package ronjones.share.socialnetwork.instagram;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import ronjones.share.common.share.enuns.SocialNetwork;
-
-import java.util.List;
 
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
 @JsonInclude(NON_NULL)
-public class ShareRequest {
+public class InstagramRequest {
 
     private String email;
     private String message;
     private String linkPhoto;
-    private List<SocialNetwork> socialNetworkLists;
 
     public String getEmail() {
         return email;
@@ -39,13 +33,5 @@ public class ShareRequest {
 
     public void setLinkPhoto(String linkPhoto) {
         this.linkPhoto = linkPhoto;
-    }
-
-    public List<SocialNetwork> getSocialNetworkLists() {
-        return socialNetworkLists;
-    }
-
-    public void setSocialNetworkLists(List<SocialNetwork> socialNetworkLists) {
-        this.socialNetworkLists = socialNetworkLists;
     }
 }
