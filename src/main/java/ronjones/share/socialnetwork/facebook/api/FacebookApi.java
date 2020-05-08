@@ -1,11 +1,13 @@
 package ronjones.share.socialnetwork.facebook.api;
 
+import org.springframework.stereotype.Service;
 import ronjones.share.common.share.Api;
 import ronjones.share.socialnetwork.facebook.FacebookRequest;
 import ronjones.share.socialnetwork.facebook.FacebookResponse;
 
 import java.util.UUID;
 
+@Service
 public class FacebookApi implements Api<FacebookResponse, FacebookRequest> {
 
     @Override
