@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
+import ronjones.share.core.service.PublishService;
 import ronjones.share.core.share.ShareRequest;
 import ronjones.share.core.share.ShareResponse;
-import ronjones.share.core.service.PublishService;
 
 import javax.validation.Valid;
 

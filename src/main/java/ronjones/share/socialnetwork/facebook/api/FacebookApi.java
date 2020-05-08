@@ -1,7 +1,7 @@
 package ronjones.share.socialnetwork.facebook.api;
 
 import org.springframework.stereotype.Service;
-import ronjones.share.core.share.Api;
+import ronjones.share.core.share.interfaces.Api;
 import ronjones.share.socialnetwork.facebook.FacebookRequest;
 import ronjones.share.socialnetwork.facebook.FacebookResponse;
 
