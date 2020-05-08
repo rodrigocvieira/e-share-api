@@ -1,7 +1,7 @@
 package ronjones.share.socialnetwork.facebook.adapter;
 
-import ronjones.share.common.share.ShareResponse;
-import ronjones.share.common.share.interfaces.ShareResponseAdapter;
+import ronjones.share.core.share.ShareResponse;
+import ronjones.share.core.share.interfaces.ShareResponseAdapter;
 import ronjones.share.socialnetwork.facebook.FacebookResponse;
 
 public class FacebookResponseToShareResponse implements ShareResponseAdapter<FacebookResponse> {

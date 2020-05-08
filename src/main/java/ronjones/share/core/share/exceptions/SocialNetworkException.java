@@ -1,4 +1,4 @@
-package ronjones.share.common.share.exceptions;
+package ronjones.share.core.share.exceptions;
 
 public class SocialNetworkException extends RuntimeException {
 

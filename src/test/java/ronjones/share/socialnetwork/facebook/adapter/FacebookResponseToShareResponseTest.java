@@ -2,7 +2,7 @@ package ronjones.share.socialnetwork.facebook.adapter;
 
 import org.junit.Before;
 import org.junit.Test;
-import ronjones.share.common.share.ShareResponse;
+import ronjones.share.core.share.ShareResponse;
 import ronjones.share.socialnetwork.facebook.FacebookResponse;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -2,9 +2,9 @@ package ronjones.share.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ronjones.share.common.share.enuns.SocialNetwork;
-import ronjones.share.common.share.exceptions.SocialNetworkException;
-import ronjones.share.decorator.ShareDecorator;
+import ronjones.share.core.share.enuns.SocialNetwork;
+import ronjones.share.core.share.exceptions.SocialNetworkException;
+import ronjones.share.core.decorator.ShareDecorator;
 import ronjones.share.socialnetwork.facebook.adapter.FacebookResponseToShareResponse;
 import ronjones.share.socialnetwork.facebook.adapter.ShareRequestToFacebookRequestAdapter;
 import ronjones.share.socialnetwork.facebook.api.FacebookApi;

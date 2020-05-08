@@ -1,10 +1,10 @@
-package ronjones.share.service;
+package ronjones.share.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
-import ronjones.share.common.share.ShareRequest;
-import ronjones.share.common.share.ShareResponse;
+import ronjones.share.core.share.ShareRequest;
+import ronjones.share.core.share.ShareResponse;
 import ronjones.share.factory.ShareFactory;
 
 @Service

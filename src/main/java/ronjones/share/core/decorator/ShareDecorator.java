@@ -1,11 +1,11 @@
-package ronjones.share.decorator;
+package ronjones.share.core.decorator;
 
 import reactor.core.publisher.Mono;
-import ronjones.share.common.share.Api;
-import ronjones.share.common.share.ShareRequest;
-import ronjones.share.common.share.ShareResponse;
-import ronjones.share.common.share.interfaces.ShareRequestAdapter;
-import ronjones.share.common.share.interfaces.ShareResponseAdapter;
+import ronjones.share.core.share.Api;
+import ronjones.share.core.share.ShareRequest;
+import ronjones.share.core.share.ShareResponse;
+import ronjones.share.core.share.interfaces.ShareRequestAdapter;
+import ronjones.share.core.share.interfaces.ShareResponseAdapter;
 
 public class ShareDecorator<Response, Request> {
 

@@ -1,4 +1,4 @@
-package ronjones.share.common.share.enuns;
+package ronjones.share.core.share.enuns;
 
 public enum SocialNetwork {
 

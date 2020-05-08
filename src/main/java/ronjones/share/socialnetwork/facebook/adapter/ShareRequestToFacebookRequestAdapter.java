@@ -1,7 +1,7 @@
 package ronjones.share.socialnetwork.facebook.adapter;
 
-import ronjones.share.common.share.ShareRequest;
-import ronjones.share.common.share.interfaces.ShareRequestAdapter;
+import ronjones.share.core.share.ShareRequest;
+import ronjones.share.core.share.interfaces.ShareRequestAdapter;
 import ronjones.share.socialnetwork.facebook.FacebookRequest;
 
 public class ShareRequestToFacebookRequestAdapter implements ShareRequestAdapter<FacebookRequest> {
