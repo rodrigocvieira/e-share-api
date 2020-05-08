@@ -1,4 +1,4 @@
-package ronjones.share.socialnetwork.instagram.adapter.api;
+package ronjones.share.socialnetwork.instagram.api;
 
 import org.junit.Before;
 import org.junit.Test;
