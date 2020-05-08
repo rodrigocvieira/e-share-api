@@ -1,9 +1,9 @@
 package ronjones.share.core.decorator;
 
 import reactor.core.publisher.Mono;
-import ronjones.share.core.share.Api;
 import ronjones.share.core.share.ShareRequest;
 import ronjones.share.core.share.ShareResponse;
+import ronjones.share.core.share.interfaces.Api;
 import ronjones.share.core.share.interfaces.ShareRequestAdapter;
 import ronjones.share.core.share.interfaces.ShareResponseAdapter;
 
