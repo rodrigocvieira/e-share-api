@@ -1,4 +1,4 @@
-package ronjones.share.common.share;
+package ronjones.share.core.share;
 
 public interface Api<Response, Request> {
 

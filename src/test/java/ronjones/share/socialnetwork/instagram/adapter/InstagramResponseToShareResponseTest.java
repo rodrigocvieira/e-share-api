@@ -2,7 +2,7 @@ package ronjones.share.socialnetwork.instagram.adapter;
 
 import org.junit.Before;
 import org.junit.Test;
-import ronjones.share.common.share.ShareResponse;
+import ronjones.share.core.share.ShareResponse;
 import ronjones.share.socialnetwork.instagram.InstagramResponse;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

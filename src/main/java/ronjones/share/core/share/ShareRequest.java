@@ -1,7 +1,7 @@
-package ronjones.share.common.share;
+package ronjones.share.core.share;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import ronjones.share.common.share.enuns.SocialNetwork;
+import ronjones.share.core.share.enuns.SocialNetwork;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
